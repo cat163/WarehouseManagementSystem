@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whq.warehousemanagementsystem.mapper.OrderinfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.whq.warehousemanagementsystem.domain.Orderinfo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="shopId" column="shopId" jdbcType="INTEGER"/>
+            <result property="commodityId" column="commodityId" jdbcType="INTEGER"/>
+            <result property="commodityName" column="commodityName" jdbcType="VARCHAR"/>
+            <result property="commodityNum" column="commodityNum" jdbcType="INTEGER"/>
+            <result property="userId" column="userId" jdbcType="INTEGER"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,shopId,commodityId,
+        commodityName,commodityNum,userId,
+        createTime,isDelete,updateTime
+    </sql>
+</mapper>
